@@ -5,7 +5,13 @@ i=1
 while i<=n:
     print("MySirG",sep='\n')
     i+=1
-print
+print()
+
+#or
+n=int(input("enter the value of n: "))
+while n:
+    print("MySirG")
+    n-=1
 
 #2. Write a python script to print first N natural numbers
 

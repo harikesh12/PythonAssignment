@@ -30,6 +30,13 @@ while i<=10:
     i+=1
 print()
 
+#or
+i=10
+while i>0:
+    print(i)
+    i-=1
+print()
+
 #4. Write a python script to print first 10 odd natural numbers
 
 i=0
