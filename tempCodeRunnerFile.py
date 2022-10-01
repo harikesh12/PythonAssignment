@@ -1,7 +1,3 @@
-n=int(input("Enter the value of n : "))
-s=' '
-while n>0:
-    k=n%8
-    s+=str(k)
-    n=n//8
-print(int(s[::-1]))
+tuple1 = (('a', 21),('b', 37),('c', 11), ('d',29))  # 11 21 29 37 
+
+print(tuple(sorted(list(tuple1),key= lambda x:x[1])))
