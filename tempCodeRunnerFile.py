@@ -1,11 +1,11 @@
-def function(a,b):
-    for k in a:
-        if k in b:
-            continue
-        else:
-            print("This is not anagram")
-            break
+def Fibonacci(n):
+    if n<0:
+        print("Incorrect Input")
+    elif n==1:
+        return 0
+    elif n==2:
+        return 1
     else:
-        print("This is anangram")
+        return Fibonacci(n-1)+Fibonacci(n-2)
 
-function("abcd","bda")
+print(Fibonacci(7))
