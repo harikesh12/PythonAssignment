@@ -1,0 +1,49 @@
+Postgres DB
+
+1. Create a table (student) with 3 columns (rollno, name, course).
+
+create table student (name text,roll_no int, course text);
+
+2. Insert records for 4 students.
+
+insert into student values ('Ram',1,'Java');
+insert into student values ('Shyam',2,'Python'),('Ramesh',3,'JavaScript'),('Karan',4,'DB')
+
+3. Write a Select query to fetch all the students.
+
+select * from student
+
+4. Update the student name of rollno 3 with ‘Mohan’
+
+update student set name='Mohan' where roll_no=3
+
+5. Delete any student from table with their rollno.
+
+delete from student where roll_no=4
+
+6. Delete all the data from student table.
+ 
+delete from student
+
+7. Drop the student table.
+
+drop table student
+
+8. Create Courses table (cid, cname) where cid is a primary key and Student table
+(rollno, name, cid) where rollno is a primary key and cid is a foreign key.
+
+create table course(cid int,cname text, primary key (cid))
+create table student (roll_no int , name text, cid int, primary key (roll_no), constraint
+					 fk_cid Foreign key (cid) references course(cid))
+
+9. Insert data in both the tables.
+
+insert into course values(101,'Java'),(102,'Python')
+insert into student values(1,'Ram',101),(2,'Shyam',102),(3,'Ramesh',102)
+
+10. Select all the students who are doing a specific course, eg. Python.
+
+select name from student where cid = (select cid from course where cname='Python')  # just for one course ID of python
+select name from student where cid in (select cid from course where cname='Python') # in case there are multiple course Id for python
+
+
