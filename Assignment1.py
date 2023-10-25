@@ -2,8 +2,8 @@ from ensurepip import version
 
 """1-Write a command to get the Python version you are using."""
 
-python -V
-python --version 
+# python -V
+# python --version 
 
 import sys
 print(sys.version)
